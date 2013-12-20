@@ -15,6 +15,8 @@ elseif exists("b:current_syntax")
    finish
 endif
 
+set commentstring=#%s
+
 syntax case ignore
 
 " Start off with the same configuration as *.tcl files
@@ -26,8 +28,9 @@ else
 endif
 
 " Add customisation appropriate to deal itself
+syntax keyword dealCommand reject accept
 
-
+highlight link dealKeyword Statement
 
 
 let b:current_syntax = "Deal"
